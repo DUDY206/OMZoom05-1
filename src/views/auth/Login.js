@@ -7,12 +7,14 @@ const Login = () => {
   const login = async (event) => {
     event.preventDefault();
     const body = {
-      name: userName,
+      email: userName,
       password: password,
     };
     try {
       const res = await AuthServices.getToken(body);
       console.log("res", res);
+      sessionStorage.setItem("token", res.data);
+      window.location = "/dashboard";
     } catch (error) {
       console.error(error);
     }

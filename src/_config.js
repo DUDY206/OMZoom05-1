@@ -5,7 +5,7 @@ let environment = "dev";
 
 if (environment == "dev") {
   MyConfig.language = "vi";
-  MyConfig.host = "http://localhost:3099/";
+  MyConfig.host = "http://localhost:9899/";
 }
 if (environment == "production") {
   MyConfig.language = "vi";
